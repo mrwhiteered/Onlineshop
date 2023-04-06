@@ -1,0 +1,263 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+  background: black;
+  color: white;
+}
+/*--------филтр---------*/
+.filterShop{
+  background: black;
+color: white;
+padding: 20px;
+margin-bottom: 50px;
+}
+.list__filter{
+  display: flex;
+  justify-content: space-around;
+}
+
+/*----------*/
+.card{ 
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-bottom: 100px;
+}
+
+.list__card{
+  display: grid;
+  align-content: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap:5%;
+  margin-bottom: 50px;
+}
+
+.item__card{
+  box-shadow: 0 0 5px 5px white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.top__card{
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.img__card{
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  
+}
+
+.bottom__card{
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.price{
+  font-size: 24px;
+  padding: 10px;
+}
+
+.buuy{
+  padding: 5px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background:none;
+  border: none;
+  color: aliceblue;
+}
+
+.buuy:hover{
+  box-shadow: inset 0 0 5px 5px white;
+}
+
+.item__name{
+  text-align: center;
+  font-size: 28px;
+}
+
+/* ------------ */
+
+.pokupochki{
+  margin: 50px;
+}
+.cart__items-container{
+   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; 
+ 
+  margin-top: 50px;
+  margin-bottom: 50px;
+ border: 2px solid white;
+ align-items: center;
+ margin:0 auto;
+
+}
+.cart__item{
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cart__item-name{
+  margin-right: 20px;
+  text-align: left;
+  font-size: 30px;
+  min-width: 150px;
+}
+.cart__item-price{
+  margin-right: 20px;
+  font-size: 30px;
+  width: 70px;
+}
+.cart__item-quantity{
+  margin-right: 20px;
+  font-size: 30px;
+}
+.cardImg{
+  width: 100px;
+}
+.card__container{
+  position: relative;
+}
+.counter__card{
+  position: absolute;
+  font-size: 36px;
+  color: red;
+  top: 50px;
+  left: 50px;
+}
+.remove-from-cart-button{
+font-size: 30px;
+background: black;
+border: solid 2px white;
+padding: 5px 10px;
+color: aliceblue;
+margin-right: 20px;
+}
+.remove__one__element{
+  font-size: 30px;
+background: black;
+border: none;
+padding: 5px 10px;
+color: aliceblue;
+margin-right: 20px;
+}
+.add__one__fromCard{
+  font-size: 30px;
+background: black;
+border: none;
+padding: 5px 10px;
+color: aliceblue;
+margin-right: 20px;
+}
+.total__price{
+  font-size: 30px;
+  background: black;
+  border: none;
+  padding: 5px 10px;
+  color: aliceblue;
+  text-align: center;
+}
+
+
+.getBuy{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.getCard{
+  font-size: 30px;
+background: black;
+border: solid white 2px;
+padding: 5px 10px;
+color: aliceblue;
+margin-left: 20px;
+
+}
